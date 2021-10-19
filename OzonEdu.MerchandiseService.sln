@@ -6,9 +6,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F2689BB3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{4BE9D6B3-641A-499C-BBCB-25027DC20D7A}"
 ProjectSection(SolutionItems) = preProject
-	 README.md = README.md
+		README.md = README.md
 	.editorconfig = .editorconfig
 	.gitignore = .gitignore
+	Dockerfile = Dockerfile
+	.dockerignore = .dockerignore
 EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "merchandise-service", "src\merchandise-service\merchandise-service.csproj", "{E65A64B3-2F75-416E-B015-05E4F93D83F1}"
