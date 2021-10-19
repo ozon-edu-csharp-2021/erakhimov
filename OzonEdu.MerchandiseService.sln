@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C285C354-5243-40A6-8145-A384D2772B2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F2689BB3-BD85-4E04-A652-3C09AD7D1AD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{4BE9D6B3-641A-499C-BBCB-25027DC20D7A}"
+ProjectSection(SolutionItems) = preProject
+	 README.md = README.md
+	.editorconfig = .editorconfig
+	.gitignore = .gitignore
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "merchandise-service", "src\merchandise-service\merchandise-service.csproj", "{E65A64B3-2F75-416E-B015-05E4F93D83F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E65A64B3-2F75-416E-B015-05E4F93D83F1} = {C285C354-5243-40A6-8145-A384D2772B2E}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E65A64B3-2F75-416E-B015-05E4F93D83F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E65A64B3-2F75-416E-B015-05E4F93D83F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E65A64B3-2F75-416E-B015-05E4F93D83F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E65A64B3-2F75-416E-B015-05E4F93D83F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
