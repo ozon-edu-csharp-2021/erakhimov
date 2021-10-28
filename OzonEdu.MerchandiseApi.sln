@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{4BE9D6
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchandiseService", "src\OzonEdu.MerchandiseService\OzonEdu.MerchandiseService.csproj", "{E65A64B3-2F75-416E-B015-05E4F93D83F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchandiseApi", "src\OzonEdu.MerchandiseApi\OzonEdu.MerchandiseApi.csproj", "{E65A64B3-2F75-416E-B015-05E4F93D83F1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{F90AFAB0-B966-422D-86B3-A7CFAA05EBDB}"
 	ProjectSection(SolutionItems) = preProject

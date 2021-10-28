@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace OzonEdu.MerchandiseService
+namespace OzonEdu.MerchandiseApi
 {
     public class Program
     {
