@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
 {
-    public class VersionMiddleware
+    internal sealed class VersionMiddleware
     {
         private readonly RequestDelegate _next;
         public VersionMiddleware(RequestDelegate next)

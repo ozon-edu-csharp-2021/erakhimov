@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
 {
-    public class LiveMiddleware
+    internal sealed class LiveMiddleware
     {
         private readonly RequestDelegate _next;
 

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
 {
-    public class ReadyMiddleware
+    internal sealed class ReadyMiddleware
     {
         private readonly RequestDelegate _next;
         public ReadyMiddleware(RequestDelegate next)

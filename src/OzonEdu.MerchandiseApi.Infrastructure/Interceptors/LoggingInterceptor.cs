@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OzonEdu.MerchandiseApi.Infrastructure.Interceptors
 {
-    public class LoggingInterceptor : Interceptor
+    internal sealed class LoggingInterceptor : Interceptor
     {
         private readonly ILogger<LoggingInterceptor> _logger;
 

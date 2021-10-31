@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace OzonEdu.MerchandiseApi.HttpClient
 {
-    public class MerchHttpClient : IMerchHttpClient
+    public sealed class MerchHttpClient : IMerchHttpClient
     {
         private readonly System.Net.Http.HttpClient _httpClient;
 

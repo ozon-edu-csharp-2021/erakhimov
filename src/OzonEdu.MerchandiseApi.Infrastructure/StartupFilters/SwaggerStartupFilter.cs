@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace OzonEdu.MerchandiseApi.Infrastructure.StartupFilters
 {
-    class SwaggerStartupFilter : IStartupFilter
+    internal sealed class SwaggerStartupFilter : IStartupFilter
     {
         public Action<IApplicationBuilder> Configure(Action<IApplicationBuilder> next)
         {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
 {
-    class HttpLoggingMiddleware
+    internal sealed class HttpLoggingMiddleware
     {
         private readonly ILogger<HttpLoggingMiddleware> _logger;
         private readonly RequestDelegate _next;
