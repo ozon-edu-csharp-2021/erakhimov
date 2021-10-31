@@ -28,14 +28,20 @@ namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
 
         private async Task LogRequest(HttpContext context)
         {
-            foreach (KeyValuePair<string, StringValues> header in context.Response.Headers)
+            if (context.Response.Headers.Count > 0)
             {
-                _logger.LogInformation("Request headers logged");
-                _logger.LogInformation($"{header.Key}:{header.Value}");
+                string headersLogString = "Request headers logged:\n";
+
+                foreach (KeyValuePair<string, StringValues> header in context.Response.Headers)
+                {
+                    headersLogString += $"\t{header.Key}:{header.Value}\n";
+                }
+                _logger.LogInformation(headersLogString);
             }
 
-            _logger.LogInformation($"Http Request Information:{Environment.NewLine}" +
-                                   $"Schema:{context.Request.Scheme} " +
+            _logger.LogInformation($"Http Request Information:" +
+                                   $"{Environment.NewLine}" +
+                                   $"Schema: {context.Request.Scheme}" +
                                    $"Host: {context.Request.Host} " +
                                    $"Path: {context.Request.Path} " +
                                    $"QueryString: {context.Request.QueryString} ");
@@ -49,8 +55,7 @@ namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
                     byte[] buffer = new byte[context.Request.ContentLength.Value];
                     await context.Request.Body.ReadAsync(buffer.AsMemory(0, buffer.Length));
                     string bodyAsText = Encoding.UTF8.GetString(buffer);
-                    _logger.LogInformation("Request logged");
-                    _logger.LogInformation($"Request Body:bodyAsText");
+                    _logger.LogInformation($"Request logged:\n Request Body:{bodyAsText}");
 
                     context.Request.Body.Position = 0;
                 }
@@ -69,10 +74,15 @@ namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
 
             await _next(context);
 
-            foreach (KeyValuePair<string, StringValues> header in context.Response.Headers)
+            if (context.Response.Headers.Count > 0)
             {
-                _logger.LogInformation("Response headers logged");
-                _logger.LogInformation($"{header.Key}:{header.Value}");
+                string headersLogString = "Response headers logged:\n";
+
+                foreach (KeyValuePair<string, StringValues> header in context.Response.Headers)
+                {
+                    headersLogString += $"\t{header.Key}:{header.Value}\n";
+                }
+                _logger.LogInformation(headersLogString);
             }
 
             try
