@@ -4,7 +4,7 @@ using OzonEdu.MerchandiseApi.Infrastructure.Extensions;
 
 namespace OzonEdu.MerchandiseApi
 {
-    public class Program
+    public sealed class Program
     {
         public static void Main(string[] args)
         {

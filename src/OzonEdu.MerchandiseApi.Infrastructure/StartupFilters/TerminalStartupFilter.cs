@@ -1,7 +1,7 @@
-﻿using System;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using OzonEdu.MerchandiseApi.Infrastructure.Middlewares;
+using System;
 
 namespace OzonEdu.MerchandiseApi.Infrastructure.StartupFilters
 {

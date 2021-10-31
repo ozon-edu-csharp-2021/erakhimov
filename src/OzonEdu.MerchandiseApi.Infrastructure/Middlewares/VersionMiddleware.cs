@@ -1,6 +1,6 @@
-﻿using System.Reflection;
+﻿using Microsoft.AspNetCore.Http;
+using System.Reflection;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 
 namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
 {

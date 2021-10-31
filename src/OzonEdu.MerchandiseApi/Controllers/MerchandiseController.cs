@@ -1,7 +1,7 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using OzonEdu.MerchandiseApi.Services.Interfaces;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace OzonEdu.MerchandiseApi.Controllers
 {
@@ -21,6 +21,7 @@ namespace OzonEdu.MerchandiseApi.Controllers
         public async Task<IActionResult> GetMerch(int id, CancellationToken token)
         {
             var response = await _service.GetMerch(id, token);
+
             return Ok(response);
         }
 
@@ -29,6 +30,7 @@ namespace OzonEdu.MerchandiseApi.Controllers
         public async Task<IActionResult> GetInfo(int id, CancellationToken token)
         {
             var response = await _service.GetInfo(id, token);
+
             return Ok(response);
         }
     }

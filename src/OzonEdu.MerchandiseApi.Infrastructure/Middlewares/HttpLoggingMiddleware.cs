@@ -28,23 +28,25 @@ namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
 
         private async Task LogRequest(HttpContext context)
         {
+            StringBuilder logStringBuilder = new();
+
             if (context.Response.Headers.Count > 0)
             {
-                string headersLogString = "Request headers logged:\n";
+                logStringBuilder.Append($"Request headers logged:{Environment.NewLine}");
 
                 foreach (KeyValuePair<string, StringValues> header in context.Response.Headers)
                 {
-                    headersLogString += $"\t{header.Key}:{header.Value}\n";
+                    logStringBuilder.Append($"{header.Key}:{header.Value}{Environment.NewLine}");
                 }
-                _logger.LogInformation(headersLogString);
+                _logger.LogInformation(logStringBuilder.ToString());
+                logStringBuilder.Clear();
             }
 
-            _logger.LogInformation($"Http Request Information:" +
-                                   $"{Environment.NewLine}" +
-                                   $"Schema: {context.Request.Scheme}" +
-                                   $"Host: {context.Request.Host} " +
-                                   $"Path: {context.Request.Path} " +
-                                   $"QueryString: {context.Request.QueryString} ");
+            logStringBuilder.Append($"Http Request Information:{Environment.NewLine}");
+            logStringBuilder.Append($"Schema: {context.Request.Scheme} Host: {context.Request.Host} Path: {context.Request.Path} QueryString: {context.Request.QueryString}");
+
+            _logger.LogInformation(logStringBuilder.ToString());
+            logStringBuilder.Clear();
 
             try
             {
@@ -55,7 +57,7 @@ namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
                     byte[] buffer = new byte[context.Request.ContentLength.Value];
                     await context.Request.Body.ReadAsync(buffer.AsMemory(0, buffer.Length));
                     string bodyAsText = Encoding.UTF8.GetString(buffer);
-                    _logger.LogInformation($"Request logged:\n Request Body:{bodyAsText}");
+                    _logger.LogInformation($"Request logged:{Environment.NewLine} Request Body:{bodyAsText}");
 
                     context.Request.Body.Position = 0;
                 }
@@ -76,13 +78,13 @@ namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
 
             if (context.Response.Headers.Count > 0)
             {
-                string headersLogString = "Response headers logged:\n";
+                StringBuilder headersLogString = new($"Response headers logged:{Environment.NewLine}");
 
                 foreach (KeyValuePair<string, StringValues> header in context.Response.Headers)
                 {
-                    headersLogString += $"\t{header.Key}:{header.Value}\n";
+                    headersLogString.Append($"{header.Key}:{header.Value}{Environment.NewLine}");
                 }
-                _logger.LogInformation(headersLogString);
+                _logger.LogInformation(headersLogString.ToString());
             }
 
             try
