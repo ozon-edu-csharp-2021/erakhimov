@@ -85,6 +85,7 @@ namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
                     headersLogString.Append($"{header.Key}:{header.Value}{Environment.NewLine}");
                 }
                 _logger.LogInformation(headersLogString.ToString());
+                headersLogString.Clear();
             }
 
             try

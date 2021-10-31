@@ -17,22 +17,25 @@ namespace OzonEdu.MerchandiseApi.GrpcServices
         public override async Task<GetMerchResponse> GetMerch(GetMerchRequest request, ServerCallContext context)
         {
             var response = await _merchandiseService.GetMerch(request.EmloyeeId, context.CancellationToken);
-
-            return new GetMerchResponse()
+            GetMerchResponse merchResult = new()
             {
                 EmloyeeId = response.EmployeerId,
                 IsIssued = response.IsIssued
             };
+
+            return merchResult;
         }
 
         public override async Task<GetMerchResponse> GetInfo(GetMerchRequest request, ServerCallContext context)
         {
             var response = await _merchandiseService.GetMerch(request.EmloyeeId, context.CancellationToken);
-            return new GetMerchResponse()
+            GetMerchResponse infoResult = new()
             {
                 EmloyeeId = response.EmployeerId,
                 IsIssued = response.IsIssued
             };
+
+            return infoResult;
         }
     }
 }

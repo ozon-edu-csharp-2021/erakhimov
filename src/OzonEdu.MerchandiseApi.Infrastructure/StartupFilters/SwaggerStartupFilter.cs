@@ -12,6 +12,7 @@ namespace OzonEdu.MerchandiseApi.Infrastructure.StartupFilters
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
+
                 next(app);
             };
         }

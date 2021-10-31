@@ -7,6 +7,7 @@ namespace OzonEdu.MerchandiseApi.Infrastructure.Middlewares
     internal sealed class ReadyMiddleware
     {
         private readonly RequestDelegate _next;
+
         public ReadyMiddleware(RequestDelegate next)
         {
             _next = next;
