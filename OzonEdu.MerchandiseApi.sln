@@ -1,0 +1,66 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C285C354-5243-40A6-8145-A384D2772B2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F2689BB3-BD85-4E04-A652-3C09AD7D1AD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{4BE9D6B3-641A-499C-BBCB-25027DC20D7A}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Dockerfile = Dockerfile
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchandiseApi", "src\OzonEdu.MerchandiseApi\OzonEdu.MerchandiseApi.csproj", "{E65A64B3-2F75-416E-B015-05E4F93D83F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{F90AFAB0-B966-422D-86B3-A7CFAA05EBDB}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\docker-compose.yaml = deploy\docker-compose.yaml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchandiseApi.Grpc", "src\OzonEdu.MerchandiseApi.Grpc\OzonEdu.MerchandiseApi.Grpc.csproj", "{C96623B0-80A0-48C6-9C2D-2ADE747B9790}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchandiseApi.HttpClient", "src\OzonEdu.MerchandiseApi.HttpClient\OzonEdu.MerchandiseApi.HttpClient.csproj", "{BDD6CAE1-A648-4EA6-90A4-706D2625BF48}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchandiseApi.Infrastructure", "src\OzonEdu.MerchandiseApi.Infrastructure\OzonEdu.MerchandiseApi.Infrastructure.csproj", "{FB4E8C69-BFF7-4191-B0ED-BC94960C4C87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E65A64B3-2F75-416E-B015-05E4F93D83F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E65A64B3-2F75-416E-B015-05E4F93D83F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E65A64B3-2F75-416E-B015-05E4F93D83F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E65A64B3-2F75-416E-B015-05E4F93D83F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C96623B0-80A0-48C6-9C2D-2ADE747B9790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C96623B0-80A0-48C6-9C2D-2ADE747B9790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C96623B0-80A0-48C6-9C2D-2ADE747B9790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C96623B0-80A0-48C6-9C2D-2ADE747B9790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD6CAE1-A648-4EA6-90A4-706D2625BF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD6CAE1-A648-4EA6-90A4-706D2625BF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD6CAE1-A648-4EA6-90A4-706D2625BF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD6CAE1-A648-4EA6-90A4-706D2625BF48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB4E8C69-BFF7-4191-B0ED-BC94960C4C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB4E8C69-BFF7-4191-B0ED-BC94960C4C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB4E8C69-BFF7-4191-B0ED-BC94960C4C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB4E8C69-BFF7-4191-B0ED-BC94960C4C87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E65A64B3-2F75-416E-B015-05E4F93D83F1} = {C285C354-5243-40A6-8145-A384D2772B2E}
+		{C96623B0-80A0-48C6-9C2D-2ADE747B9790} = {C285C354-5243-40A6-8145-A384D2772B2E}
+		{BDD6CAE1-A648-4EA6-90A4-706D2625BF48} = {C285C354-5243-40A6-8145-A384D2772B2E}
+		{FB4E8C69-BFF7-4191-B0ED-BC94960C4C87} = {C285C354-5243-40A6-8145-A384D2772B2E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BDD6DA1-2EB5-462D-B6F2-4DE00D0174EF}
+	EndGlobalSection
+EndGlobal

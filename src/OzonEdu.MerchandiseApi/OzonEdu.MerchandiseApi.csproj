@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\OzonEdu.MerchandiseApi.Grpc\OzonEdu.MerchandiseApi.Grpc.csproj" />
+      <ProjectReference Include="..\OzonEdu.MerchandiseApi.Infrastructure\OzonEdu.MerchandiseApi.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
