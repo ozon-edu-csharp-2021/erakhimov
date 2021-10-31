@@ -1,5 +1,5 @@
 ﻿using OzonEdu.MerchandiseApi.Models;
-using System.Text.Json;
+using System.Net.Http.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,15 +17,17 @@ namespace OzonEdu.MerchandiseApi.HttpClient
         public async Task<MerchResponse> GetMerch(MerchRequest merchRequest, CancellationToken token)
         {
             using var response = await _httpClient.GetAsync($"api/merchandise/{merchRequest.EmployeerId}/merch/", token);
-            var body = await response.Content.ReadAsStringAsync(token);
-            return JsonSerializer.Deserialize<MerchResponse>(body);
+            var merchResult = await response.Content.ReadFromJsonAsync<MerchResponse>(cancellationToken: token);
+
+            return merchResult;
         }
 
         public async Task<MerchResponse> GetInfo(MerchRequest merchRequest, CancellationToken token)
         {
             using var response = await _httpClient.GetAsync($"api/merchandise/{ merchRequest.EmployeerId}/info/", token);
-            var body = await response.Content.ReadAsStringAsync(token);
-            return JsonSerializer.Deserialize<MerchResponse>(body);
+            var infoResult = await response.Content.ReadFromJsonAsync<MerchResponse>(cancellationToken: token);
+
+            return infoResult;
         }
     }
 }
