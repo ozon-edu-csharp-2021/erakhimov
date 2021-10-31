@@ -1,6 +1,6 @@
 ﻿namespace OzonEdu.MerchandiseApi.Models
 {
-    public class MerchRequest
+    public sealed class MerchRequest
     {
         public int EmployeerId { get; }
 

@@ -7,7 +7,7 @@ namespace OzonEdu.MerchandiseApi.Controllers
 {
     [ApiController]
     [Produces("application/json")]
-    public class MerchandiseController : ControllerBase
+    public sealed class MerchandiseController : ControllerBase
     {
         private IMerchandiseService _service;
 

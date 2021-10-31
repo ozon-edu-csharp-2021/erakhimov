@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace OzonEdu.MerchandiseApi.Models
+﻿namespace OzonEdu.MerchandiseApi.Models
 {
-    public class MerchResponse
+    public sealed class MerchResponse
     {
         public int EmployeerId { get; }
 

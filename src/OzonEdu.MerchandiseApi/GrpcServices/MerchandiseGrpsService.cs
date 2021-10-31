@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace OzonEdu.MerchandiseApi.GrpcServices
 {
-    public class MerchandiseGrpsService : MerchandiseApiGrpc.MerchandiseApiGrpcBase
+    public sealed class MerchandiseGrpsService : MerchandiseApiGrpc.MerchandiseApiGrpcBase
     {
         private readonly IMerchandiseService _merchandiseService;
 

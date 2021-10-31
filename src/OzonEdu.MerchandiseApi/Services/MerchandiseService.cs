@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace OzonEdu.MerchandiseApi.Services
 {
-    public class MerchandiseService : IMerchandiseService
+    public sealed class MerchandiseService : IMerchandiseService
     {
         public async Task<MerchResponse> GetInfo(int id, CancellationToken token)
         {
